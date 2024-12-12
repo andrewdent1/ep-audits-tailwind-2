@@ -14,50 +14,54 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sawarabi+Mincho&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+    </style>
 </head>
 
 <body class="bg-grey-900">
     <header>
-        <nav class="bg-green-950 flex justify-between items-center px-6 py-4 h-[12vh]">
-            <div>
+        <nav class="flex items-center justify-between flex-wrap bg-green-900 p-6 z-10">
+            <div class="flex items-center flex-no-shrink text-white mr-6">
                 <a href="index.html">
-                    <img src="ep-audits-logo.png" alt="Environmental Property Audits Logo"
-                        class="h-16 md:24">
+                    <img src="ep-audits-logo.png" alt="" class="min-w-[250px] max-w-[20vw]">
                 </a>
             </div>
-            <div class="flex items-center space-x-4">
-                <div class="relative">
-                    <div class="md:hidden absolute px-5">
-                        <ul id="nav-links1"
-                            class="absolute top-[6vh] left-[5vw] flex flex-col align-baseline md:hidden px-10 py-4 rounded-md gap-4 w-[100vw] bg-green-900 hidden">
-                            <li><a class="text-white hover:underline" href="index.html">Home</a></li>
-                            <li><a class="text-white hover:underline" href="about.html">About</a></li>
-                            <li><a class="text-white hover:underline" href="services.html">Services</a></li>
-                            <li><a class="text-white hover:underline" href="clients.html">Clients</a></li>
-                            <li><a class="text-white hover:underline" href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
+            <div class="block lg:hidden">
+                <button
+                    class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-blue-darkest hover:bg-white"
+                    onclick="myFunction()">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="w-full hidden lg:block lg:flex lg:items-center lg:w-auto" id="nav">
+                <div class="text-sm lg:flex-grow">
+                    <a href="#responsive-header"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 text-lg text-gray-200 hover:underline">
+                        Home
+                    </a>
+                    <a href="#responsive-header"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 text-lg text-gray-200 hover:underline">
+                        About
+                    </a>
+                    <a href="#responsive-header"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 text-lg text-gray-200 hover:underline">
+                        Services
+                    </a>
+                    <a href="#responsive-header"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 text-lg text-gray-200 hover:underline">
+                        Clients
+                    </a>
+                    <a href="#responsive-header"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white text-lg text-gray-200 hover:underline">
+                        Contact
+                    </a>
                 </div>
-            </div>
-            <div class="flex flex-row gap-10">
-                <h1 class="hidden md:block font-light text-xl text-white">1-800-404-0443</h1>
-                <a href="https://www.facebook.com/profile.php?id=100072187024873" target="_blank">
-                    <img src="fb-logo.png" alt="Facebook Logo"
-                        class="h-8 w-8 rounded hidden md:block">
-                </a>
-            </div>
-            <ion-icon id="hamburger" name="menu-outline" class="text-3xl cursor-pointer md:hidden"
-                style="color: white;"></ion-icon>
-        </nav>
-
-
-        <nav class="bg-green-700 hidden md:block py-2">
-            <div class="flex justify-center space-x-6">
-                <a href="index.html" class="text-white hover:underline">Home</a>
-                <a href="about.html" class="text-white hover:underline">About Us</a>
-                <a href="services.html" class="text-white hover:underline">Services</a>
-                <a href="clients.html" class="text-white hover:underline">Clients</a>
-                <a href="contact.html" class="text-white hover:underline">Contact</a>
             </div>
         </nav>
     </header>
