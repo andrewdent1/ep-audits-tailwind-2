@@ -13,6 +13,53 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sawarabi+Mincho&display=swap"
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .slideshow-container {
+            position: relative;
+            width: 250vw;
+            height: 50vh;
+            margin-top: 25px;
+            /* Enough height to accommodate the tallest image */
+        }
+
+        .slideshow {
+            display: flex;
+            align-items: center;
+            animation: scroll 90s linear infinite;
+            /* Continuous, seamless movement */
+        }
+
+        .slide {
+            margin-right: 5vw;
+            object-fit: cover;
+            background: #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.33);
+            border-radius: 5px;
+            min-width: 400px;
+        }
+
+        /* Alternate heights for images */
+        .slide:nth-child(odd) {
+            height: 40vh;
+        }
+
+        .slide:nth-child(even) {
+            height: 40vh;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0%);
+                /* Start from the beginning */
+            }
+
+            100% {
+                transform: translateX(-111%);
+                /* Move the entire slideshow container to the left */
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-grey-900 overflow-x-hidden max-w-full">
